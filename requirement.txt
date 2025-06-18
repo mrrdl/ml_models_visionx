@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+opencv-python
+numpy
+pillow
+
+# For ML model loading and inference
+scikit-learn
+torch
+tensorflow
+torchvision
+
+# If any MediaPipe processing is used
+mediapipe
