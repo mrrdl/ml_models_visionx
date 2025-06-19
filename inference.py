@@ -34,13 +34,13 @@ def preprocess_for_classification(image_bytes: bytes) -> np.ndarray:
                     std=[0.229, 0.224, 0.225])
     ])
     tensor = transform(image).unsqueeze(0)  # [1, 3, 224, 224]
-    return tensor.numpy().reshape(1, -1)
+    return tensor
 
 # Face shape classifier
 face_class_names = ['Heart', 'Oblong', 'Oval', 'Round', 'Square']
 
 def predict_face_shape(image_bytes: bytes) -> str:
-    tensor = preprocess_for_classification(image_bytes, as_tensor=True)
+    tensor = preprocess_for_classification(image_bytes)
     with torch.no_grad():
         logits = face(tensor)
         predicted_class = torch.argmax(logits, dim=1).item()

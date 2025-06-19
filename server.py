@@ -49,11 +49,12 @@ async def pose_measurement_api(file: UploadFile = File(...)):
 async def predict_all(file: UploadFile = File(...)):
     image_bytes = await file.read()
 
-    
     try:
+        face= predict_face_shape(image_bytes)
         skin = predict_skin_tone(image_bytes)
         pose = predict_pose_measurements(image_bytes)
         return {
+            "face_shape": face,
             'skin_tone': skin,
             **pose
         }
