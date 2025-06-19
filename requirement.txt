@@ -1,9 +1,9 @@
 fastapi
 uvicorn[standard]
 python-multipart
-opencv-python
+opencv-python-headless
 numpy
-pillow
+Pillow
 
 # For ML model loading and inference
 scikit-learn
