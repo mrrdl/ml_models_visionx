@@ -1,15 +1,18 @@
-fastapi
-uvicorn[standard]
-python-multipart
-opencv-python-headless
-numpy
-Pillow
+# FastAPI Server
+fastapi==0.110.1
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
 
-# For ML model loading and inference
-scikit-learn
-torch
-tensorflow
-torchvision
+# Core Image Processing
+opencv-python-headless==4.9.0.80
+numpy==1.24.4
+Pillow==10.3.0
 
-# If any MediaPipe processing is used
-mediapipe
+# ML and Deep Learning
+scikit-learn==1.3.2
+torch==2.1.2
+torchvision==0.16.2
+tensorflow==2.14.0
+
+# Pose and Landmark Detection
+mediapipe==0.10.9
