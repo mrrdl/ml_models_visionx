@@ -20,3 +20,10 @@ tensorflow==2.14.0
 
 # Pose and Landmark Detection
 mediapipe==0.10.9
+
+transformers==4.41.0
+sentencepiece
+sentence_transformers
+pandas
+google.generativeai
+google.cloud
